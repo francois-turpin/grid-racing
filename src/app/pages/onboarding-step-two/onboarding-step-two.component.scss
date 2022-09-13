@@ -1,0 +1,59 @@
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: auto;
+    flex: 1;
+    width: 715px;
+}
+
+.container-lg {
+    display: flex;
+    flex-direction: column;
+}
+
+.badge {
+    width: 45px;
+    height: 28px;
+    display: block;
+    margin: auto;
+    line-height: 20px;
+}
+
+.races .col-4 div {
+    cursor: pointer;
+    height: 270px;
+    border: 2px solid #2E2E2E;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+
+    .h1 {
+        font-family: 'Coign';
+        font-size: 96px;
+    }
+
+    &.active {
+        color: #000;
+        background-color: #fff;
+
+        span {
+            color: #000;
+        }
+    
+    }
+
+    span {
+        font-size: 14px;
+        color: #959595;
+    }
+
+    label {
+        font-size: 16px;
+    }
+}
+
+a {
+    font-size: 14px;;
+}

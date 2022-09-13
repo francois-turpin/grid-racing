@@ -1,0 +1,55 @@
+<main class="page">
+    <section>
+        <div class="wrapper">
+            <div class="container-lg">
+                <span class="badge rounded-pill text-bg-light mb-3">3/6</span>
+                <div class="mb-5">
+                    <p class="h2 text-center">Select your class</p>
+                    <blockquote class="text-center">Next step: Calendar configuration</blockquote>
+                </div>
+                <div class="classes gx-3 row mb-5">
+                    <div class="col-3">
+                        <div (click)="setActive(1)" [ngClass]="{'active': selectedType === 1}">
+                            <div>
+                                <img src="../../../assets/img/cars/gt3.png" alt="">
+                            </div>
+                            <p class="h2">GT3</p>
+                        </div>
+                    </div>
+                    <div class="col-3">
+                        <div (click)="setActive(2)" [ngClass]="{'active': selectedType === 2}">
+                            <div>
+                                <img src="../../../assets/img/cars/gt4.png" alt="">
+                            </div>
+                            <p class="h2">GT4</p>
+                        </div>
+                    </div>
+                    <div class="col-3">
+                        <div (click)="setActive(3)" [ngClass]="{'active': selectedType === 3}">
+                            <div>
+                                <img src="../../../assets/img/cars/gtc.png" alt="">
+                            </div>
+                            <p class="h2">GTC</p>
+                        </div>
+                    </div>
+                    <div class="col-3">
+                        <div (click)="setActive(4)" [ngClass]="{'active': selectedType === 4}">
+                            <div>
+                                <img src="../../../assets/img/cars/tcx.png" alt="">
+                            </div>
+                            <p class="h2">TCX</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-6">
+                        <a href="" routerLink="/onboarding-step-two" class="w-100 btn btn-outline-light btn-lg">Back</a>
+                    </div>
+                    <div class="col-6">
+                        <a href="" routerLink="/onboarding-step-three" class="w-100 btn btn-light btn-lg">Continue</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>

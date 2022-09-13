@@ -1,0 +1,159 @@
+@import "../../node_modules/bootstrap/scss/bootstrap.scss";
+
+// Switchs
+
+$form-check-input-width  : 1em;
+$form-check-min-height   : $font-size-base * $line-height-base;
+$form-check-padding-start: $form-check-input-width+0.5em;
+$form-check-margin-bottom: 0.125rem;
+$form-check-label-color  : null;
+$form-check-label-cursor : null;
+$form-check-transition   : null;
+
+$form-check-input-active-filter: brightness(90%);
+
+$form-check-input-bg              : transparent;
+$form-check-input-border          : 2px solid #2E2E2E;
+$form-check-input-border-radius   : 0.25em;
+$form-check-radio-border-radius   : 50%;
+$form-check-input-focus-border    : $input-focus-border-color;
+$form-check-input-focus-box-shadow: $input-btn-focus-box-shadow;
+
+$form-check-input-checked-color       : #fff;
+$form-check-input-checked-bg-color    : transparent;
+$form-check-input-checked-border-color: #fff;
+$form-check-input-checked-bg-image    : url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'><path fill='none' stroke='#{$form-check-input-checked-color}' stroke-linecap='round' stroke-linejoin='round' stroke-width='3' d='M6 10l3 3l6-6'/></svg>");
+$form-check-radio-checked-bg-image    : url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'><circle r='2' fill='#{$form-check-input-checked-color}'/></svg>");
+
+$form-check-input-indeterminate-color       : $component-active-color;
+$form-check-input-indeterminate-bg-color    : $component-active-bg;
+$form-check-input-indeterminate-border-color: $form-check-input-indeterminate-bg-color;
+$form-check-input-indeterminate-bg-image    : url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'><path fill='none' stroke='#{$form-check-input-indeterminate-color}' stroke-linecap='round' stroke-linejoin='round' stroke-width='3' d='M6 10h8'/></svg>");
+
+$form-check-input-disabled-opacity    : 0.5;
+$form-check-label-disabled-opacity    : $form-check-input-disabled-opacity;
+$form-check-btn-check-disabled-opacity: $btn-disabled-opacity;
+
+$form-check-inline-margin-end: 1rem;
+@import "../../node_modules/bootstrap/scss/bootstrap.scss";
+
+@font-face {
+    font-family: "Circular Std";
+    src        : url("../assets/fonts/CircularStd-Medium.otf") format("opentype"),
+        url("../assets/fonts/CircularStd-Medium.eot") format("embedded-opentype"),
+        url("../assets/fonts/CircularStd-Medium.ttf") format("truetype");
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: "Circular Std";
+    src        : url("../assets/fonts/CircularStd-Bold.otf") format("opentype"),
+        url("../assets/fonts/CircularStd-Bold.eot") format("embedded-opentype"),
+        url("../assets/fonts/CircularStd-Bold.ttf") format("truetype");
+    font-weight: 700;
+}
+
+@font-face {
+    font-family: "Circular Std";
+    src        : url("../assets/fonts/CircularStd-Black.otf") format("opentype"),
+        url("../assets/fonts/CircularStd-Black.eot") format("embedded-opentype"),
+        url("../assets/fonts/CircularStd-Black.ttf") format("truetype");
+    font-weight: 900;
+}
+
+@font-face {
+    font-family: "Coign";
+    src        : url("../assets/fonts/Coign-47-bold-pro.ttf") format("truetype");
+}
+
+body {
+    height    : 100vh;
+    width     : 100%;
+    box-sizing: content-box;
+    color     : #fff;
+    margin    : 0;
+}
+
+.page {
+    font-family        : "Circular Std";
+    background-image   : url("../assets/img/bg-sunset.png");
+    background-size    : cover;
+    background-position: center;
+    background-repeat  : no-repeat;
+    width              : 100%;
+    min-height         : 100%;
+    display            : flex;
+    flex-direction     : column;
+
+    section {
+        flex            : 1;
+        background-color: #000000d7;
+        min-height      : 100%;
+        width           : 100%;
+        display         : flex;
+        flex-direction  : column;
+    }
+
+    .content-wrapper {
+        justify-content : center;
+        align-items     : center;
+        max-width       : 450px;
+        background-color: #00000026;
+        border          : 2px solid rgba(255, 255, 255, 0.1);
+        backdrop-filter : blur(48px);
+        /* Note         : backdrop-filter has minimal browser support */
+        border-radius   : 1px;
+        padding         : 35px 30px;
+        margin          : auto;
+
+        .row>label {
+            font-weight: bold;
+            font-size  : 12px;
+            color      : #959595;
+        }
+    }
+}
+
+.btn {
+    border-radius: 0;
+}
+
+input.form-control {
+    background-color: transparent;
+    border-top      : 0;
+    border-left     : 0;
+    border-right    : 0;
+    border-radius   : 0;
+    border-color    : #2e2e2e;
+
+    &::placeholder {
+        color: #2e2e2e;
+    }
+
+    &:focus {
+        color: #fff;
+        background-color: transparent;
+        border-color    : #fff;
+        box-shadow: none;
+        border-radius   : 0;
+
+        &::placeholder {
+            color: #959595;
+        }
+    }
+}
+
+.form-switch {
+    padding: 0;
+
+    .form-check-input {
+        width           : 50px;
+        height          : 30px;
+        margin-left     : 0;
+        background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='3' fill='%23959595'/%3e%3c/svg%3e");
+    }
+}
+
+.form-switch .form-check-input:focus {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='3' fill='%23fff'/%3e%3c/svg%3e");
+}

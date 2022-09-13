@@ -1,0 +1,42 @@
+<main class="page">
+    <section>
+        <div class="wrapper">
+            <div class="container-lg">
+                <span class="badge rounded-pill text-bg-light mb-3">2/6</span>
+                <div class="mb-5">
+                    <p class="h2 text-center">Type of races</p>
+                    <blockquote class="text-center">Next step: Pitstop rules</blockquote>
+                </div>
+                <div class="races row gx-3 mb-5">
+                    <div class="col-4">
+                        <div (click)="setActive(1)" [ngClass]="{'active': selectedType === 1}">
+                            <span>No pitstop rules needed*</span>
+                            <p class="h1">-1h</p>
+                            <label>Sprint</label>
+                        </div>
+                    </div>
+                    <div class="col-4">
+                        <div (click)="setActive(2)" [ngClass]="{'active': selectedType === 2}">
+                            <p class="h1">+1h</p>
+                            <label>Endurance</label>
+                        </div>
+                    </div>
+                    <div class="col-4">
+                        <div (click)="setActive(3)" [ngClass]="{'active': selectedType === 3}">
+                            <p class="h1">All</p>
+                            <label>Mix</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-6">
+                        <a href="" routerLink="/onboarding-step-one" class="w-100 btn btn-outline-light btn-lg">Back</a>
+                    </div>
+                    <div class="col-6">
+                        <a href="" routerLink="/onboarding-step-three" class="w-100 btn btn-light btn-lg">Continue</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
